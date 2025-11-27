@@ -10,10 +10,11 @@ app.get('/',(req,res)=>{
 
 app.get("/sign",(req,res)=>{
     const {file} =req.query;
-    fs.writeFile(file,"hello",(err)=>{
-        if(err) throw err;
-        console.log("file created")
-    })
+    const {content}= req.query;
+    fs.writeFile(file, content, (err) => {
+      if (err) throw err;
+      console.log("file created");
+    });
 
     res.send("file is created ")
 });
