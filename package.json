@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/surajarchive/teaching-basic-nodejs/issues"
   },
-  "homepage": "https://github.com/surajarchive/teaching-basic-nodejs#readme"
+  "homepage": "https://github.com/surajarchive/teaching-basic-nodejs#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
