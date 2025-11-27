@@ -29,6 +29,15 @@ app.get("/rename",(req,res)=>{
     res.send("file renamed successfully");
 });
 
+
+localhost:3000/
+app.get('/:name',(req,res)=>{
+    const {name} = req.params;
+    res.send(`welcome to ${name} page`)
+});
+
+
+
 app.listen(3000,()=>{
     console.log("Server is running on port 3000");
 })
