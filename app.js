@@ -1,4 +1,5 @@
 import express from 'express';
+import fs from 'fs'
 const app = express();
 
 app.get('/',(req,res)=>{
@@ -8,8 +9,13 @@ app.get('/',(req,res)=>{
 })
 
 app.get("/sign",(req,res)=>{
-    const {name} =req.query;
-    res.send(`your name is ${name}`)
+    const {file} =req.query;
+    fs.writeFile(file,"hello",(err)=>{
+        if(err) throw err;
+        console.log("file created")
+    })
+
+    res.send("file is created ")
 });
 
 
