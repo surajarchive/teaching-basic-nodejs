@@ -10,3 +10,7 @@ chapter 1
 file operation 
 
 CRUDE OPERATION
+
+
+
+[diagram](./diagram.png)
