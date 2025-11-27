@@ -7,6 +7,7 @@ app.get('/', (req, res) => {
 });
 app.get('/signin', (req, res) => {
     const {file} = req.query;
+    const {content} = req.query;
     fs.writeFile("parna.txt", `Hello, ${file}! You have signed in successfully.`, (err) => {
         if (err) throw err;
         console.log("File created successfully.");
