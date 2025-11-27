@@ -1,12 +1,18 @@
 import express from 'express';
 const app = express();
+import fs from 'fs';
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 app.get('/signin', (req, res) => {
-    const {name} = req.query;
-    res.send(`Hello, ${name}! You have signed in successfully.`);
+    const {file} = req.query;
+    fs.writeFile("parna.txt", `Hello, ${file}! You have signed in successfully.`, (err) => {
+        if (err) throw err;
+        console.log("File created successfully.");
+    });
+
+    res.send(`Hello, ${file}! You have signed in successfully.`);
 });
 
 
